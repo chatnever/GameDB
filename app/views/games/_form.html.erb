@@ -1,0 +1,10 @@
+<%= simple_form_for @game, :html => { :multipart => true }  do |f| %>
+	<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a category") %>
+	<%= f.file_field :game_img %>
+	<%= f.input :title, label: "Game Title" %>
+	<%= f.input :description %>
+	<%= f.input :developer %>
+	<%= f.input :download %>
+	<%= f.input :video %>
+	<%= f.button :submit, class: "btn-custom2" %>
+<% end %>
